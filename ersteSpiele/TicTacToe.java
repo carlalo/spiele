@@ -34,12 +34,12 @@ public class TicTacToe
         player[4]="|  /  \\ |";
         player[5]="---------";
 
-        computer[0]="--------";
-        computer[1]="|      |";
-        computer[2]="|  /\\  |";
-        computer[3]="|  \\/  |";
-        computer[4]="|      |";
-        computer[5]="--------";
+        computer[0]="---------";
+        computer[1]="|       |";
+        computer[2]="|   /\\  |";
+        computer[3]="|   \\/  |";
+        computer[4]="|       |";
+        computer[5]="---------";
 
         runde=0;
     }
@@ -126,12 +126,129 @@ public class TicTacToe
 
     private void eingabeComp(int runde)
     {
-        int random=Integer.parseInt(String.valueOf(Math.round(Math.random()*8)));
-        if(spieler[random]!=true)
+        if(rechner[0]==true)
         {
-            if(rechner[random]!=true)
+            if(rechner[1]==true)
             {
-                rechner[random]=true;
+                if(spieler[2]!=true) 
+                {
+                    rechner[2]=true;
+                }
+            }else
+            {
+                if(rechner[3]==true)
+                {
+                    if(spieler[6]!=true)
+                    {
+                        rechner[6]=true;
+                    }
+                }else
+                {
+                    if(rechner[4]==true)
+                    {
+                        if(spieler[8]!=true)
+                        {
+                            rechner[8]=true;
+                        }
+                    }
+                    else
+                    {
+                        if(rechner[2]==true)
+                        {
+                            if(spieler[1]!=true)
+                            {
+                                rechner[1]=true;
+                            }
+                            else
+                            {
+                                if(rechner[3]==true)
+                                {
+                                    if(spieler[6]!=true)
+                                    {
+                                        rechner[6]=true;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+                if(rechner[3]==true)
+                {
+                    if(rechner[4]==true)
+                    {
+                        if(spieler[5]!=true) 
+                        {
+                            rechner[5]=true;
+                        }
+                    }
+                    if(rechner[5]==true)
+                    {
+                        if(spieler[4]!=true)
+                        {
+                            rechner[4]=true;
+                        }
+                    }
+                }
+                if(rechner[6]==true)
+                {
+                    if(rechner[7]==true)
+                    {
+                        if(spieler[8]!=true) 
+                        {
+                            rechner[8]=true;
+                        }
+                    }
+                }
+
+                if(rechner[1]==true)
+                {
+                    if(rechner[4]==true)
+                    {
+                        if(spieler[7]!=true) 
+                        {
+                            rechner[7]=true;
+                        }
+                    }
+                }
+                if(rechner[2]==true)
+                {
+                    if(rechner[5]==true)
+                    {
+                        if(spieler[8]!=true) 
+                        {
+                            rechner[8]=true;
+                        }
+                    }
+                    else
+                    {
+                        if(rechner[4]==true)
+                        {
+                            if(spieler[6]!=true)
+                            {
+                                rechner[6]=true;
+                            }
+                        }else
+                        {
+                            if(rechner[6]==true)
+                            {
+                                if(spieler[4]!=true)
+                                {
+                                    rechner[4]=true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            int random=Integer.parseInt(String.valueOf(Math.round(Math.random()*8)));
+            if(spieler[random]!=true)
+            {
+                if(rechner[random]!=true)
+                {
+                    rechner[random]=true;
+                }
+
             }
         }
     }

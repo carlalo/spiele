@@ -99,7 +99,7 @@ public class SchiffeVersenken
 
     private void spielplanAusgeben()
     {
-        System.out.println(" ".repeat(8)+"Dein Spielplan"+" ".repeat(22)+"Computer");
+        System.out.println(" ".repeat(8)+"Dein Spielplan"+" ".repeat(52)+"Computer");
         for(int anzahl=0;anzahl<5;++anzahl){
             for(int zeile=0;zeile<6;++zeile)
             {
@@ -127,25 +127,29 @@ public class SchiffeVersenken
                 }
                 for(int reihe=0;reihe<5;++reihe)
                 {
+                    if(reihe==0)
+                    {
+                        System.out.print(" ".repeat(33));
+                    }
                     if(Computerschiffe[reihe][anzahl]==true){
                         if(Computerschiffe[reihe][anzahl]==Spielereingegeben[reihe][anzahl])
                         {
-                            System.out.print("  ");
+
                             System.out.print(markiert[zeile]);
                         }else
                         {
-                            System.out.print("  ");
+
                             System.out.print(kasten[zeile]);
                         }
                     }
                     else
                     {if(Spielereingegeben[reihe][anzahl]==true)
                         {
-                            System.out.print("  ");
+
                             System.out.print(kreuz[zeile]);
                         }
                         else{
-                            System.out.print("  ");
+
                             System.out.print(kasten[zeile]);
                         }
                     }

@@ -108,7 +108,7 @@ public class Hangman
             }
         }
         System.out.println("-".repeat(31));
-        System.out.println("Das gesuchte Wort ist :"+"_".repeat(wörter[zufall].length()-1));
+        System.out.println("Das gesuchte Wort ist :"+"_".repeat(wörter[zufall].length()));
         System.out.println("-".repeat(31));
         System.out.println("Ihr Versuch:");
 

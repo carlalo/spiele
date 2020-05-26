@@ -194,6 +194,11 @@ public class SchiffeVersenken
             System.out.println("Jetzt ist der Computer dran");
             x=Integer.parseInt(String.valueOf(Math.round(Math.random()*4)));
             y=Integer.parseInt(String.valueOf(Math.round(Math.random()*4)));
+            while(Computereingegeben[y][x]==true)
+            {
+                x=Integer.parseInt(String.valueOf(Math.round(Math.random()*4)));
+                y=Integer.parseInt(String.valueOf(Math.round(Math.random()*4)));
+            }
             if(Computereingegeben[y][x]!=true)
             {
                 Computereingegeben[y][x]=true;
